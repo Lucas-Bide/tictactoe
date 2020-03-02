@@ -77,6 +77,7 @@ class TicTacToe
             @board.display
             turn % 2 == 0 ? take_turn(players[0], "x") : take_turn(players[1], 'o')
             turn += 1
+            system("clear") || system("cls")
         end
 
         @board.display
@@ -105,7 +106,8 @@ class TicTacToe
             "Too many incorrect responses. Ending game. Come again!"
         else
             if answer == 'y'
-                puts "Let's begin!"
+                system("clear") || system("cls")
+                greet
                 play
             else
                 "Come again!"
